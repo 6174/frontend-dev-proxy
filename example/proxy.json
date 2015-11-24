@@ -1,0 +1,14 @@
+{
+    "port": "80",
+    "static": "../",
+    "target": {
+        "dev.idcos.net": {
+            "/assets/idcos-enterprise-ui2-.*.css": "idcos-enterprise-ui2/dist/assets/idcos-enterprise-ui2.css",
+            "/assets/idcos-enterprise-ui2-.*.js": "idcos-enterprise-ui2/dist/assets/idcos-enterprise-ui2.js",
+            "/images/(.*)-?.*.png": "idcos-enterprise-ui2/dist/images/$1.png"
+        }
+    },
+    "hosts": {
+        "dev.idcos.net": "10.0.3.2"
+    }
+}

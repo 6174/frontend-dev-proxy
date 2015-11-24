@@ -1,0 +1,45 @@
+# frontend-dev-proxy 
+
+
+## About
+ 
+ front-end local development proxy server
+
+
+## Install
+
+```shell
+npm install -g front-dev-proxy
+```
+
+
+## configuration proxy.json 
+
+```json
+{
+	// proxy port
+	"port": "80",
+	// root directory for local files
+	"static": "../",
+	// local file proxy
+    "target": {
+    	// host match
+        "dev.idcos.net": {
+        	// files in regexp
+            "/assets/idcos-enterprise-ui2-.*.css": "idcos-enterprise-ui2/dist/assets/idcos-enterprise-ui2.css",
+            "/assets/idcos-enterprise-ui2-.*.js": "idcos-enterprise-ui2/dist/assets/idcos-enterprise-ui2.js",
+            "/images/(.*)-?.*.png": "idcos-enterprise-ui2/dist/images/$1.png"
+        }
+    },
+    // host for reverse proxy
+    "hosts": {
+    	"dev.idcos.net": "10.0.3.2"
+    }
+}
+```
+
+## start proxy
+
+```shell
+proxy -c proxy.json
+```
