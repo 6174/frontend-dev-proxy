@@ -15,7 +15,7 @@ npm install -g front-dev-proxy
 
 ## configuration proxy.json 
 
-```json
+```js
 {
 	// proxy port
 	"port": "80",
